@@ -86,7 +86,7 @@
                     </scoreDef>
                     <section xml:id="section-0000001488987234">
 			<app>
-			<rdg source="#critApp.source1">
+			<lem source="#critApp.source1">
                         <pb xml:id="pb-0000001065320755" />
                         <measure xml:id="measure-0000000740098031" n="1">
                             <staff xml:id="staff-0000000791531000" n="1">
@@ -2438,7 +2438,7 @@
                             <tie xml:id="tie-0000001410634033" startid="#note-0000001466264551" endid="#note-0000000885191905" />
                             <tie xml:id="tie-0000001208159878" startid="#note-0000000918575131" endid="#note-0000000882027415" />
                         </measure>
-			</rdg>
+			</lem>
 			<rdg source="#critApp.source2">
                         <pb xml:id="pb-0000001065320755" />
                         <measure xml:id="measure-0000000740098031" n="1">
