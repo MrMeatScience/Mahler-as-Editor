@@ -7,7 +7,7 @@
             <titleStmt>
                 <title>Bärenhäuter Act 3 finale</title>
                 <respStmt>
-                    <persName role="composer">S. Wagner</persName>
+                    <persName role="composer">Siegfried Wagner</persName>
                 </respStmt>
             </titleStmt>
             <pubStmt></pubStmt>
@@ -19,15 +19,11 @@
                     <p xml:id="p-0000000603724267">Transcoded from MusicXML</p>
                 </application>
             </appInfo>
-	<sourceDesc>
-	    <source xml:id="critApp.source1">
-		Siegfried's original vocal score, as published in 1898.
-	    </source>
-	    <source xml:id="critApp.source2">
-		Mahler's edits in the vocal score, predating orchestral score alterations.
-	    </source>
-	</sourceDesc>
         </encodingDesc>
+	<sourceDesc>
+		<source xml:id="critApp.source1"/>
+		<source xml:id="critApp.source2"/>
+	</sourceDesc>
     </meiHead>
     <music>
         <body>
@@ -87,7 +83,6 @@
                     <section xml:id="section-0000001488987234">
 			<app>
 			<choice>
-			<orig>
 			<lem source="#critApp.source1">
                         <pb xml:id="pb-0000001065320755" />
                         <measure xml:id="measure-0000000740098031" n="1">
@@ -2340,7 +2335,6 @@
                             <tie xml:id="tie-0000000230137975" startid="#note-0000000359411078" endid="#note-0000001177242731" />
                             <tie xml:id="tie-0000001686333294" startid="#note-0000000623906937" endid="#note-0000000464407427" />
                         </measure>
-			</del>
                         <measure xml:id="measure-0000001000370339" right="end" n="12">
                             <staff xml:id="staff-0000002046593182" n="1">
                                 <layer xml:id="layer-0000000726657050" n="1">
@@ -2441,7 +2435,6 @@
                             <tie xml:id="tie-0000001208159878" startid="#note-0000000918575131" endid="#note-0000000882027415" />
                         </measure>
 			</lem>
-			<orig>
 			<rdg source="#critApp.source2">
                         <pb xml:id="pb-0000001065320755" />
                         <measure xml:id="measure-0000000740098031" n="1">
@@ -4695,6 +4688,7 @@
                             <tie xml:id="tie-0000000230137975" startid="#note-0000000359411078" endid="#note-0000001177242731" />
                             <tie xml:id="tie-0000001686333294" startid="#note-0000000623906937" endid="#note-0000000464407427" />
                         </measure>
+			</del>
                         <measure xml:id="measure-0000001000370339" right="end" n="12">
                             <staff xml:id="staff-0000002046593182" n="1">
                                 <layer xml:id="layer-0000000726657050" n="1">
