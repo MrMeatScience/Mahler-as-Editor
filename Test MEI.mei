@@ -1226,6 +1226,8 @@
 			</app>
                         </measure>
                         <measure xml:id="measure-0000000804216699" n="6">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000000789873149" n="1">
                                 <layer xml:id="layer-0000001856478339" n="1">
                                     <note xml:id="note-0000001580036926" dur.ppq="24" dur="4" oct="5" pname="f" stem.dir="down">
@@ -1492,6 +1494,9 @@
                                 </layer>
                             </staff>
                             <slur xml:id="slur-0000001494695095" startid="#note-0000001878196858" endid="#note-0000000525670421" curvedir="above" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000508597887" n="7">
                             <staff xml:id="staff-0000001373089536" n="1">
