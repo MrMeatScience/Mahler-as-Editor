@@ -1499,6 +1499,8 @@
 			</app>
                         </measure>
                         <measure xml:id="measure-0000000508597887" n="7">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000001373089536" n="1">
                                 <layer xml:id="layer-0000000189575816" n="1">
                                     <note xml:id="note-0000000927574986" dur.ppq="12" dur="8" oct="5" pname="g" stem.dir="down">
@@ -1786,8 +1788,13 @@
                                 </layer>
                             </staff>
                             <slur xml:id="slur-0000001811286082" startid="#chord-0000001261453378" endid="#chord-0000001313651134" curvedir="above" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000994093409" n="8">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000000968688133" n="1">
                                 <layer xml:id="layer-0000000076564614" n="1">
                                     <mRest xml:id="mrest-0000001980213497" />
@@ -1965,8 +1972,13 @@
                             <slur xml:id="slur-0000000129187939" startid="#note-0000001933071482" endid="#note-0000001129410619" curvedir="above" />
                             <dynam xml:id="dynam-0000000148699668" place="below" staff="7" tstamp="1.000000" vgrp="40">p</dynam>
                             <slur xml:id="slur-0000001213210464" startid="#note-0000001750397586" endid="#note-0000001551345454" curvedir="above" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001893143586" n="9">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000000503501099" n="1">
                                 <layer xml:id="layer-0000000071123969" n="1">
                                     <mRest xml:id="mrest-0000001048836593" />
@@ -2102,8 +2114,13 @@
                                 </layer>
                             </staff>
                             <tie xml:id="tie-0000002054299554" startid="#note-0000001679376926" endid="#note-0000000342968553" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001397315611" n="10">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000001776163701" n="1">
                                 <layer xml:id="layer-0000001553534547" n="1">
                                     <mRest xml:id="mrest-0000000040280401" />
@@ -2224,8 +2241,13 @@
                             <slur xml:id="slur-0000000167426733" startid="#chord-0000001036833813" endid="#note-0000001617392479" curvedir="below" />
                             <slur xml:id="slur-0000000369851010" startid="#chord-0000001036833813" endid="#note-0000001617392479" curvedir="below" />
                             <slur xml:id="slur-0000001037149311" startid="#chord-0000001036833813" endid="#note-0000001617392479" curvedir="below" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000296906280" n="11">
+			<app>
+			<lem>
                             <staff xml:id="staff-0000000089776430" n="1">
                                 <layer xml:id="layer-0000001115413100" n="1">
                                     <mRest xml:id="mrest-0000000941537080" />
@@ -2351,6 +2373,9 @@
                             <tie xml:id="tie-0000000102517809" startid="#note-0000000590310426" endid="#note-0000000240460340" />
                             <tie xml:id="tie-0000000230137975" startid="#note-0000000359411078" endid="#note-0000001177242731" />
                             <tie xml:id="tie-0000001686333294" startid="#note-0000000623906937" endid="#note-0000000464407427" />
+			</lem>
+			<rdg source="#Mahler"></rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001000370339" right="end" n="12">
                             <staff xml:id="staff-0000002046593182" n="1">
@@ -2393,11 +2418,18 @@
                             </staff>
                             <staff xml:id="staff-0000000451735906" n="2">
                                 <layer xml:id="layer-0000001651131677" n="1">
+				<app>
+				<lem>
                                     <note xml:id="note-0000001930606716" dur.ppq="24" dur="4" oct="3" pname="a" stem.dir="down">
                                         <verse xml:id="verse-0000000206552532" n="1">
                                             <syl xml:id="syl-0000001063293364" con="s">nicht?</syl>
                                         </verse>
                                     </note>
+				</lem>
+				<rdg source="#Mahler">
+				    <rest dur="4"/>
+				</rdg>
+				</app>
                                     <rest xml:id="rest-0000000183052215" dur.ppq="24" dur="4" />
                                     <rest xml:id="rest-0000001775035206" dur.ppq="48" dur="2" />
                                 </layer>
