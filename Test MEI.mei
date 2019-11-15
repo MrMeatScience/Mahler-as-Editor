@@ -408,9 +408,9 @@
                                 </layer>
                             </staff>
                         </measure>
+                        <measure xml:id="measure-0000001452895325" n="3">
 			<app>
 			<lem>
-                        <measure xml:id="measure-0000001452895325" n="3">
                             <staff xml:id="staff-0000001731261428" n="1">
                                 <layer xml:id="layer-0000000690500221" n="1">
                                     <note xml:id="note-0000001297973337" dur.ppq="24" dur="4" oct="5" pname="c" stem.dir="down">
@@ -663,6 +663,8 @@
                                 </layer>
                             </staff>
                             <tie xml:id="tie-0000001072703340" startid="#note-0000000492033164" endid="#note-0000000575454557" />
+			</lem>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001103292902" n="4">
                             <staff xml:id="staff-0000001752235971" n="1">
