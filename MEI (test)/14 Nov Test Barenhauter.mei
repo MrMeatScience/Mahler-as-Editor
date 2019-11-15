@@ -2387,6 +2387,7 @@
                                     </note>
 				</lem>
 				<rdg source="Mahler"></rdg>
+				</app>
                                     <rest xml:id="rest-0000000183052215" dur.ppq="24" dur="4" />
                                     <rest xml:id="rest-0000001775035206" dur.ppq="48" dur="2" />
                                 </layer>
