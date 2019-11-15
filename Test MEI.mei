@@ -952,7 +952,7 @@
                         </measure>
                         <measure xml:id="measure-0000001716505452" n="5">
 			<app>
-			</lem>
+			<lem>
                             <staff xml:id="staff-0000001367853174" n="1">
                                 <layer xml:id="layer-0000000308696058" n="1">
                                     <rest xml:id="rest-0000001868918437" dur.ppq="24" dur="4" />
