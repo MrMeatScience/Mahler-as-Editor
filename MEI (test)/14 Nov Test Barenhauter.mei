@@ -2378,11 +2378,15 @@
                             </staff>
                             <staff xml:id="staff-0000000451735906" n="2">
                                 <layer xml:id="layer-0000001651131677" n="1">
+				<app>
+				<lem>
                                     <note xml:id="note-0000001930606716" dur.ppq="24" dur="4" oct="3" pname="a" stem.dir="down">
                                         <verse xml:id="verse-0000000206552532" n="1">
                                             <syl xml:id="syl-0000001063293364" con="s">nicht?</syl>
                                         </verse>
                                     </note>
+				</lem>
+				<rdg source="Mahler"></rdg>
                                     <rest xml:id="rest-0000000183052215" dur.ppq="24" dur="4" />
                                     <rest xml:id="rest-0000001775035206" dur.ppq="48" dur="2" />
                                 </layer>
