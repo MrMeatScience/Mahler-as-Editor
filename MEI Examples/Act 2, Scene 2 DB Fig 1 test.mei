@@ -467,7 +467,7 @@
                                     <rdg source="#Mahler">
                                         <layer n="1">
                                             <rest dur="4"/>
-                                            <staffDef clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G"/>
+                                            <staffDef clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G">
                                             <note dur="8" oct="3" pname="f">
                                                 <verse n="1">
                                                     <syl con="d">Ihr</syl>
@@ -489,6 +489,7 @@
                                                     <syl con="d">den</syl>
                                                 </verse>
                                             </note>
+                                            </staffDef>
                                         </layer>
                                     </rdg>
                                 </app>
