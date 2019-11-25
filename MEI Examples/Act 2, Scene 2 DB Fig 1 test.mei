@@ -467,7 +467,6 @@
                                     <rdg source="#Mahler">
                                         <layer n="1">
                                             <rest dur="4"/>
-                                            <staffDef clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G">
                                             <note dur="8" oct="3" pname="f">
                                                 <verse n="1">
                                                     <syl con="d">Ihr</syl>
@@ -488,8 +487,7 @@
                                                 <verse n="1">
                                                     <syl con="d">den</syl>
                                                 </verse>
-                                            </note>
-                                            </staffDef>
+                                            </note>                                           
                                         </layer>
                                     </rdg>
                                 </app>
@@ -525,14 +523,57 @@
                         </measure>
                         <measure xml:id="measure-0000000894829885" n="6">
                             <staff xml:id="staff-0000000047637833" n="1">
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
                                 <layer xml:id="layer-0000001947006071" n="1">
                                     <mRest xml:id="mrest-0000000942846516" />
                                 </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer n="1">
+                                            <rest dur="2"/>
+                                            <note dur="4" oct="3" pname="a">
+                                                <verse n="1">
+                                                    <syl con="d">Ja!</syl>                                                     
+                                                </verse>
+                                            </note>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000000750343867" n="2">
-                                <layer xml:id="layer-0000000751746923" n="1">
-                                    <mRest xml:id="mrest-0000001246754285" />
-                                </layer>
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
+                                        <layer xml:id="layer-0000000637194649" n="1">
+                                            <mRest xml:id="mrest-0000001075767485" />
+                                        </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer n="1">
+                                            <note dur="16" oct="4" pname="c">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="i"> Bür</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="m">ger</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="m">mei</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="t">ster?</syl>
+                                                </verse>
+                                            </note>
+                                            <rest dur="2"/>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000000371721064" n="3">
                                 <layer xml:id="layer-0000001381806496" n="1">
@@ -588,9 +629,53 @@
                                 </layer>
                             </staff>
                             <staff xml:id="staff-0000001199740825" n="2">
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
                                 <layer xml:id="layer-0000001172337292" n="1">
                                     <mRest xml:id="mrest-0000001085709470" />
                                 </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer>
+                                            <rest dur="8"/>
+                                            <note dur="8" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">Er</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">nimmt</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">aus</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="i">sei</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="16" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="t">nem</syl>                                                       
+                                                </verse>
+                                            </note>
+                                            <note dur="8" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">Sack</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="8" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">das</syl>
+                                                </verse>
+                                            </note>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000002144645330" n="3">
                                 <layer xml:id="layer-0000000343631792" n="1">
@@ -633,14 +718,64 @@
                         <pb xml:id="pb-0000001301433322" />
                         <measure xml:id="measure-0000000031465680" n="8">
                             <staff xml:id="staff-0000001704889746" n="1">
-                                <layer xml:id="layer-0000000702337004" n="1">
-                                    <mRest xml:id="mrest-0000001930947035" />
-                                </layer>
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
+                                        <layer xml:id="layer-0000000343631792" n="1">
+                                            <mRest xml:id="mrest-0000000155749421" />
+                                        </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer n="1">
+                                            <rest dur="4"/>
+                                            <tuplet dur="4" num="3" numbase="2">
+                                                <note dur="8" oct="3" pname="a">
+                                                    <verse n="1">
+                                                        <syl con="d">Da</syl>
+                                                    </verse>
+                                                </note>
+                                                <note dur="8" oct="3" pname="a">
+                                                    <verse n="1">
+                                                        <syl con="d">sind</syl>
+                                                    </verse>
+                                                </note>
+                                                <note dur="8" oct="3" pname="a">
+                                                    <verse n="1">
+                                                        <syl con="d">die</syl>
+                                                    </verse>
+                                                </note>
+                                            </tuplet>
+                                            <note dur="8" oct="3" pname="a">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="i">sech</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="8" oct="3" pname="a">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="t">zig</syl>
+                                                </verse>
+                                            </note>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000002058912547" n="2">
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
                                 <layer xml:id="layer-0000001000483273" n="1">
                                     <mRest xml:id="mrest-0000000988305130" />
                                 </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer n="1">
+                                            <note dur="4" oct="3" pname="f">
+                                                <verse n="1">
+                                                    <syl con="d">Geld...</syl>
+                                                </verse>
+                                            </note>
+                                            <rest dur="2"/>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000001103219263" n="3">
                                 <layer xml:id="layer-0000000361604624" n="1">
@@ -680,9 +815,27 @@
                         </measure>
                         <measure xml:id="measure-0000001241912209" n="9">
                             <staff xml:id="staff-0000000632534512" n="1">
+                                <app>
+                                    <lem source="#Siegfried's Published Score">
                                 <layer xml:id="layer-0000000743648597" n="1">
                                     <mRest xml:id="mrest-0000000934640267" />
                                 </layer>
+                                    </lem>
+                                    <rdg source="#Mahler">
+                                        <layer n="1">
+                                            <note dur="8" oct="4" pname="c" accid="s">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="i">Gul</syl>
+                                                </verse>
+                                            </note>
+                                            <note dur="8" oct="3" pname="a">
+                                                <verse n="1">
+                                                    <syl con="d" wordpos="t">den.</syl>
+                                                </verse>
+                                            </note>
+                                        </layer>
+                                    </rdg>
+                                </app>
                             </staff>
                             <staff xml:id="staff-0000001230218797" n="2">
                                 <layer xml:id="layer-0000001233356497" n="1">
