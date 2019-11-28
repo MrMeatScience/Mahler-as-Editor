@@ -22,23 +22,47 @@
     <music>
         <body>
             <mdiv xml:id="mdiv-0000001751972184">
-                <score xml:id="score-0000001708173798">
-		<app>
-		<lem source="#Siegfried's Published Score">		
+                <score xml:id="score-0000001708173798">	
                     <scoreDef xml:id="scoredef-0000001267726855">
                         <staffGrp xml:id="staffgrp-0000002025533427">
+			<app>
+			<lem source="#Siegfried's Published Score">	
                             <staffDef xml:id="staffdef-0000001010370304" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
                                 <keySig xml:id="keysig-0000000923342116" sig="5f" />
-                                <label xml:id="label-0000001911312751">Soprano</label>
-                                <labelAbbr xml:id="labelAbbr-0000001194625343">S.</labelAbbr>
+                                <label xml:id="label-0000001911312751">Luise</label>
+                                <labelAbbr xml:id="labelAbbr-0000001194625343">L.</labelAbbr>
                                 <instrDef xml:id="instrdef-0000001735664842" midi.channel="0" midi.instrnum="52" midi.volume="78.00%" />
                             </staffDef>
+			</lem>
+			<rdg source="#Mahler">
+                            <staffDef xml:id="staffdef-0000001010370304" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
+                                <keySig xml:id="keysig-0000000923342116" sig="5f" />
+                                <label xml:id="label-0000001911312751">Luise</label>
+                                <labelAbbr xml:id="labelAbbr-0000001194625343">L.</labelAbbr>
+                                <instrDef xml:id="instrdef-0000001735664842" midi.channel="0" midi.instrnum="52" midi.volume="78.00%" />
+                            </staffDef>
+			</rdg>
+			</app>
+			<app>
+			<lem source="#Siegfried's Published Score">
                             <staffDef xml:id="staffdef-0000000968664717" n="2" lines="5" ppq="6" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below" meter.count="3" meter.unit="4">
                                 <keySig xml:id="keysig-0000002020954334" sig="5f" />
-                                <label xml:id="label-0000000965088050">Tenor</label>
-                                <labelAbbr xml:id="labelAbbr-0000000928138533">T.</labelAbbr>
+                                <label xml:id="label-0000000965088050">Hans</label>
+                                <labelAbbr xml:id="labelAbbr-0000000928138533">H.</labelAbbr>
                                 <instrDef xml:id="instrdef-0000001714362748" midi.channel="1" midi.instrnum="52" midi.volume="78.00%" />
                             </staffDef>
+			</lem>
+			<rdg source="#Mahler">
+                            <staffDef xml:id="staffdef-0000000968664717" n="2" lines="5" ppq="6" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below" meter.count="3" meter.unit="4">
+                                <keySig xml:id="keysig-0000002020954334" sig="5f" />
+                                <label xml:id="label-0000000965088050">Hans</label>
+                                <labelAbbr xml:id="labelAbbr-0000000928138533">H.</labelAbbr>
+                                <instrDef xml:id="instrdef-0000001714362748" midi.channel="1" midi.instrnum="52" midi.volume="78.00%" />
+                            </staffDef>
+			</rdg>
+			</app>
+			<app>
+			<lem source="#Siegfried's Published Score">
                             <staffDef xml:id="staffdef-0000001243484037" n="3" lines="5" ppq="6" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below" meter.count="3" meter.unit="4">
                                 <keySig xml:id="keysig-0000000562982816" sig="5f" />
                                 <label xml:id="label-0000001740257884">Bauern-Tenor I</label>
@@ -63,6 +87,11 @@
                                 <labelAbbr xml:id="labelAbbr-0000001632817194">B2.</labelAbbr>
                                 <instrDef xml:id="instrdef-0000000630023087" midi.channel="6" midi.instrnum="52" midi.volume="78.00%" />
                             </staffDef>
+			</lem>
+			<rdg source="#Mahler"/>
+			</app>
+			<app>
+			<lem source="#Siegfried's Published Score">
                             <staffGrp xml:id="staffgrp-0000000553002135" symbol="brace" bar.thru="true">
                                 <label xml:id="label-0000000203001423">Reduction</label>
                                 <labelAbbr xml:id="labelAbbr-0000000432576013">Red.</labelAbbr>
@@ -74,38 +103,22 @@
                                     <keySig xml:id="keysig-0000000463771927" sig="5f" />
                                 </staffDef>
 				</staffGroup>
-			</scoreDef>
 			</lem>
 			<rdg source="#Mahler">
-			<scoreDef xml:id="scoredef-0000001267726855">
-                          <staffGrp xml:id="staffgrp-0000002025533427">
-                            <staffDef xml:id="staffdef-0000000397467333" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
-                                <keySig xml:id="keysig-0000001065992537" sig="5f" />
-                                <label xml:id="label-0000000862885560">Luise</label>
-                                <labelAbbr xml:id="labelAbbr-0000002066185100">L.</labelAbbr>
-                                <instrDef xml:id="instrdef-0000000206546658" midi.channel="0" midi.instrnum="52" midi.volume="78.00%" />
-                            </staffDef>
-                            <staffDef xml:id="staffdef-0000002135303465" n="2" lines="5" ppq="6" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below" meter.count="3" meter.unit="4">
-                                <keySig xml:id="keysig-0000001475162982" sig="5f" />
-                                <label xml:id="label-0000000577873066">Hans</label>
-                                <labelAbbr xml:id="labelAbbr-0000000890429064">H.</labelAbbr>
-                                <instrDef xml:id="instrdef-0000001361469649" midi.channel="1" midi.instrnum="52" midi.volume="78.00%" />
-                            </staffDef>
-                            <staffGrp xml:id="staffgrp-0000001038843063" symbol="brace" bar.thru="true">
-                                <label xml:id="label-0000001176029728">Reduction</label>
-                                <labelAbbr xml:id="labelAbbr-0000001687351946">Red.</labelAbbr>
-                                <instrDef xml:id="instrdef-0000000675224749" midi.channel="2" midi.instrnum="0" midi.volume="78.00%" />
-                                <staffDef xml:id="staffdef-0000002009053507" n="3" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
-                                    <keySig xml:id="keysig-0000000456957634" sig="5f" />
+				<staffGrp xml:id="staffgrp-0000000553002135" symbol="brace" bar.thru="true">
+                                <label xml:id="label-0000000203001423">Reduction</label>
+                                <labelAbbr xml:id="labelAbbr-0000000432576013">Red.</labelAbbr>
+                                <instrDef xml:id="instrdef-0000001525554178" midi.channel="2" midi.instrnum="0" midi.volume="78.00%" />
+                                <staffDef xml:id="staffdef-0000001155847892" n="7" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
+                                    <keySig xml:id="keysig-0000001224511368" sig="5f" />
                                 </staffDef>
-                                <staffDef xml:id="staffdef-0000000983730936" n="4" lines="5" ppq="6" clef.shape="F" clef.line="4" meter.count="3" meter.unit="4">
-                                    <keySig xml:id="keysig-0000001078329778" sig="5f" />
+                                <staffDef xml:id="staffdef-0000001251297645" n="8" lines="5" ppq="6" clef.shape="F" clef.line="4" meter.count="3" meter.unit="4">
+                                    <keySig xml:id="keysig-0000000463771927" sig="5f" />
                                 </staffDef>
-                            </staffGrp>
-                        </staffGrp>
-                    </scoreDef>
-		</rdg>
-		</app>
+				</staffGroup>
+			</rdg>
+			</app>
+			</scoreDef>
                     <section xml:id="section-0000001830050528">
                         <pb xml:id="pb-0000001822555962" />
                         <measure xml:id="measure-0000001586175777" n="1">
