@@ -690,7 +690,8 @@
 			<lem>
 			<scoreDef xml:id="scoredef-0000000003480881" meter.count="3" meter.unit="2" >
 				<keySig xml:id="keysig-0000001729205536" sig="5n" />
-			<rdg source="#Mahler"
+			</lem>
+			<rdg source="##Mahler"
                         <scoreDef xml:id="scoredef-0000000003480880" meter.count="4" meter.unit="4" />
 			</rdg>
 			</app>
