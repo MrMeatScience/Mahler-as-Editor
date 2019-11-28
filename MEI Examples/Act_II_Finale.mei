@@ -687,6 +687,8 @@
                         </measure>
                         <scoreDef xml:id="scoredef-0000000880297196" meter.count="4" meter.unit="4" />
                         <measure xml:id="measure-0000000889130299" n="8">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000000339454069" n="1">
                                 <layer xml:id="layer-0000000941845515" n="1">
                                     <mRest xml:id="mrest-0000000444630625" />
@@ -746,6 +748,8 @@
                             <arpeg xml:id="arpeg-0000001378541752" plist="#chord-0000000850385173 #chord-0000001196013413 #chord-0000001893076626" />
                             <tie xml:id="tie-0000000552175299" startid="#note-0000000302167216" endid="#note-0000001810326446" />
                             <tie xml:id="tie-0000000854573009" startid="#note-0000000467783468" endid="#note-0000002145689373" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001510584322" n="9">
                             <staff xml:id="staff-0000001131165225" n="1">
