@@ -77,8 +77,8 @@
 			</scoreDef>
 			</lem>
 			<rdg source="#Mahler">
-			<scoreDef xml:id="scoredef-0000001267726856">
-                          <staffGrp xml:id="staffgrp-0000002025533428">
+			<scoreDef xml:id="scoredef-0000001267726855">
+                          <staffGrp xml:id="staffgrp-0000002025533427">
                             <staffDef xml:id="staffdef-0000000397467333" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
                                 <keySig xml:id="keysig-0000001065992537" sig="5f" />
                                 <label xml:id="label-0000000862885560">Luise</label>
