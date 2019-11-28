@@ -74,7 +74,6 @@
                                     <keySig xml:id="keysig-0000000463771927" sig="5f" />
                                 </staffDef>
 			</lem>
-			</app>
 			<rdg source="#Mahler">
                             <staffDef xml:id="staffdef-0000000397467333" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
                                 <keySig xml:id="keysig-0000001065992537" sig="5f" />
