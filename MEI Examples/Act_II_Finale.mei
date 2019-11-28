@@ -28,7 +28,7 @@
             <mdiv xml:id="mdiv-0000001751972184">
                 <score xml:id="score-0000001708173798">
 		<app>
-		<lem source="#Siegfried's Published Score">
+		<lem source="#Siegfried's published score">
                     <scoreDef xml:id="scoredef-0000001267726855">
                         <staffGrp xml:id="staffgrp-0000002025533427">
 			                            <staffDef xml:id="staffdef-0000001010370304" n="1" lines="5" ppq="6" clef.shape="G" clef.line="2" meter.count="3" meter.unit="4">
