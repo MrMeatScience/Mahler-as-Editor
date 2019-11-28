@@ -2718,7 +2718,7 @@
                                     <rest xml:id="rest-0000001703043576" dur.ppq="12" dur="2" />
                                 </layer>
                             </staff>
-                            <fermata xml:id="fermata-0000000373705337" staff="3" startid="#chord-0000001868294085" form="norm" place="above" />
+                            <fermata xml:id="fermata-0000000373705337" staff="8" startid="#chord-0000001868294085" form="norm" place="above" />
 			</rdg>
 			</app>
                         </measure>
