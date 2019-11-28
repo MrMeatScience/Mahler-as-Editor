@@ -1039,6 +1039,26 @@
 				<mRest/>
 				</layer>
 				</staff>
+				<staff n="4">
+				<layer n="1">
+				<mRest/>
+				</layer>
+				</staff>
+				<staff n="5">
+				<layer n="1">
+				<mRest/>
+				</layer>
+				</staff>
+				<staff n="6">
+				<layer n="1">
+				<mRest/>
+				</layer>
+				</staff>
+				<staff n="7">
+				<layer n="1">
+				<mRest/>
+				</layer>
+				</staff>
                             <staff xml:id="staff-0000000253184514" n="8">
                                 <layer xml:id="layer-0000000669024591" n="1">
                                     <chord xml:id="chord-0000000675836603" dur.ppq="12" dur="2" stem.dir="up">
