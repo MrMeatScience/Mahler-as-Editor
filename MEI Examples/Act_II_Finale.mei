@@ -685,7 +685,14 @@
                             <tie xml:id="tie-0000000278734413" startid="#note-0000001998230562" endid="#note-0000000805939465" />
                             <tie xml:id="tie-0000001090760255" startid="#note-0000001480553612" endid="#note-0000001189775780" />
                         </measure>
+			<app>
+			<lem source="#Siegfried's Published Score">
+			 <scoreDef xml:id="scoredef-0000001545042148" key.sig="0" meter.count="2" meter.unit="2" />
+			</lem>
+			<rdg source="#Mahler">
                         <scoreDef xml:id="scoredef-0000000880297196" meter.count="4" meter.unit="4" />
+			</rdg>
+			</app>
                         <measure xml:id="measure-0000000889130299" n="8">
 			<app>
 			<rdg source="#Mahler">
