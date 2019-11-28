@@ -98,9 +98,9 @@
                                 <staffDef xml:id="staffdef-0000000983730936" n="4" lines="5" ppq="6" clef.shape="F" clef.line="4" meter.count="3" meter.unit="4">
                                     <keySig xml:id="keysig-0000001078329778" sig="5f" />
                                 </staffDef>
+                            </staffGrp>
 			</rdg>
 			</app>
-                            </staffGrp>
                         </staffGrp>
                     </scoreDef>
                     <section xml:id="section-0000001830050528">
