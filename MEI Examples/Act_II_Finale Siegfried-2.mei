@@ -1018,7 +1018,7 @@
                             <tie xml:id="tie-0000000017759295" startid="#note-0000001194042204" endid="#note-0000000332476485" />
 			</lem>
 			<rdg source="#Mahler">
-<staff xml:id="staff-0000000339454069" n="1">
+			<staff xml:id="staff-0000000339454069" n="1">
                                 <layer xml:id="layer-0000000941845515" n="1">
                                     <mRest xml:id="mrest-0000000444630625" />
                                 </layer>
@@ -1034,7 +1034,7 @@
                                     <rest xml:id="rest-0000001933855774" dur.ppq="6" dur="4" />
                                 </layer>
                             </staff>
-                            <staff xml:id="staff-0000000253184514" n="3">
+                            <staff xml:id="staff-0000000253184514" n="8">
                                 <layer xml:id="layer-0000000669024591" n="1">
                                     <chord xml:id="chord-0000000675836603" dur.ppq="12" dur="2" stem.dir="up">
                                         <note xml:id="note-0000001499305825" oct="4" pname="a" accid.ges="f" />
@@ -1057,7 +1057,7 @@
                                     </chord>
                                 </layer>
                             </staff>
-                            <staff xml:id="staff-0000001483410480" n="4">
+                            <staff xml:id="staff-0000001483410480" n="9">
                                 <layer xml:id="layer-0000002080386793" n="5">
                                     <chord xml:id="chord-0000001196013413" dur.ppq="24" dur="1">
                                         <note xml:id="note-0000001251422332" oct="2" pname="d" accid.ges="f" />
