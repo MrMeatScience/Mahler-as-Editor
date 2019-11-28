@@ -752,6 +752,8 @@
 			</app>
                         </measure>
                         <measure xml:id="measure-0000001510584322" n="9">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001131165225" n="1">
                                 <layer xml:id="layer-0000001247584184" n="1">
                                     <mRest xml:id="mrest-0000001319361534" />
@@ -790,8 +792,12 @@
                                 </layer>
                             </staff>
                             <tie xml:id="tie-0000000491702394" startid="#note-0000001492923458" endid="#note-0000001514805624" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001414256265" n="10">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001791259551" n="1">
                                 <layer xml:id="layer-0000000542835125" n="1">
                                     <rest xml:id="rest-0000001548424182" dur.ppq="12" dur="2" />
@@ -848,8 +854,12 @@
                                 </layer>
                             </staff>
                             <arpeg xml:id="arpeg-0000000129683194" plist="#chord-0000000460249715" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000502699923" n="11">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001357554860" n="1">
                                 <layer xml:id="layer-0000000240857463" n="1">
                                     <rest xml:id="rest-0000001564702816" dur.ppq="12" dur="2" />
@@ -894,9 +904,13 @@
                                 </layer>
                             </staff>
                             <arpeg xml:id="arpeg-0000000034112999" plist="#chord-0000001046306354" />
+			</rdg>
+			</app>
                         </measure>
                         <pb xml:id="pb-0000001726716731" />
                         <measure xml:id="measure-0000001535116683" n="12">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000000764062713" n="1">
                                 <layer xml:id="layer-0000000683143591" n="1">
                                     <note xml:id="note-0000000176312129" dots="1" dur.ppq="9" dur="4" oct="4" pname="e" stem.dir="up" accid.ges="f">
@@ -964,8 +978,12 @@
                                 </layer>
                             </staff>
                             <arpeg xml:id="arpeg-0000001865341814" plist="#chord-0000000442497120" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000258026508" n="13">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001344718708" n="1">
                                 <layer xml:id="layer-0000001074883409" n="1">
                                     <note xml:id="note-0000000961727490" dur.ppq="12" dur="2" oct="4" pname="a" stem.dir="up" accid.ges="f">
@@ -1008,8 +1026,12 @@
                             </staff>
                             <tie xml:id="tie-0000000223899116" startid="#note-0000000017982285" endid="#note-0000000891786181" />
                             <tie xml:id="tie-0000001203422434" startid="#note-0000000281594595" endid="#note-0000001794287491" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001514755099" n="14">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000002027359777" n="1">
                                 <layer xml:id="layer-0000000633308179" n="1">
                                     <note xml:id="note-0000000891786181" dur.ppq="6" dur="4" oct="4" pname="a" stem.dir="up" accid.ges="f" />
@@ -1056,8 +1078,12 @@
                                     <note xml:id="note-0000001436426777" dur.ppq="24" dur="1" oct="2" pname="a" accid.ges="f" />
                                 </layer>
                             </staff>
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000000383922257" n="15">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001860889020" n="1">
                                 <layer xml:id="layer-0000002100195282" n="1">
                                     <note xml:id="note-0000001686563241" dur.ppq="24" dur="1" oct="5" pname="d" accid.ges="f">
@@ -1104,8 +1130,12 @@
                             <tie xml:id="tie-0000000113360366" startid="#note-0000000333102315" endid="#note-0000000457143641" />
                             <tie xml:id="tie-0000000118227751" startid="#note-0000001912739982" endid="#note-0000000273537968" />
                             <tie xml:id="tie-0000002099899971" startid="#note-0000000811048592" endid="#note-0000000777956731" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001369057902" n="16">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001403112558" n="1">
                                 <layer xml:id="layer-0000000635750945" n="1">
                                     <mRest xml:id="mrest-0000001170020952" />
@@ -1147,8 +1177,12 @@
                             <tie xml:id="tie-0000000067620823" startid="#note-0000000457143641" endid="#note-0000001631354425" />
                             <tie xml:id="tie-0000001104681955" startid="#note-0000000273537968" endid="#note-0000001368521845" />
                             <tie xml:id="tie-0000001394910162" startid="#note-0000000777956731" endid="#note-0000001466230252" />
+			</rdg>
+			</app>
                         </measure>
                         <measure xml:id="measure-0000001107337221" right="end" n="17">
+			<app>
+			<rdg source="#Mahler">
                             <staff xml:id="staff-0000001975344714" n="1">
                                 <layer xml:id="layer-0000001398405657" n="1">
                                     <mRest xml:id="mrest-0000001192031828" />
@@ -1185,6 +1219,8 @@
                                 </layer>
                             </staff>
                             <fermata xml:id="fermata-0000000373705337" staff="3" startid="#chord-0000001868294085" form="norm" place="above" />
+			</rdg>
+			</app>
                         </measure>
                     </section>
                 </score>
