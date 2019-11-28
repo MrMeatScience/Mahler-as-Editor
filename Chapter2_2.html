@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        p.ex1 
+        {
+        margin-left: 30%;
+        margin-right: 30%;
+        }
+        h4.ex1
+        {
+        margin-left: 30%;
+        margin-right: 30%;
+        }
+        blockquote.ex1
+        {
+        margin-left: 35%;
+        margin-right: 35%;
+        }
+        ul.ex1 
+        {
+        margin-left: 30%;
+        margin-right: 30%;
+        }
+        div.ex1 
+        {
+        margin-left: 30%;
+        margin-right: 30%;
+        }
+        div.ex2 
+        {
+        margin-left: 20%;
+        margin-right: 20%;
+        }
+</style>
+        <style type="text/css">
+ p.topright
+ {
+   position:absolute;
+   top:0;
+   right:135px;
+  }
+  p.topleft
+ {
+   position:absolute;
+   top:0;
+   left:135px;
+  }
+   p.bottomright
+ {
+   position:fixed;
+   bottom:0;
+   right:135px;
+  }
+</style>
+        <title>Mahler as Editor</title>
+        <script src="https://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
+        <!-- We also use jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
+        <script src="javascript/basic-events.js" type="text/javascript" ></script>
+        <!--///////////////////////////////////-->
+        <!-- A stylesheet for the help overlay -->
+        <!--///////////////////////////////////-->
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/rism-ch/verovio-tutorial/gh-pages/css/tutorial.css" />
+    </head>
+    <body>
+        <h4 class="ex1">Chapter II: Mahler’s Revisions</h4>
+        <p class="topright"><a href="Chapter2_3.html" target="_self">Next Page ---></a></p>
+        <p class="topleft"><a href="Chapter2_1.html" target="_self">&lt;--- Previous Page</a></p>
+        <p class="ex1" style="text-indent: 4%">
+            The seventh scene, which would have concluded the second act in Siegfried’s version, sees Spitz, presumably aggrieved after the situation with the sack, goading the farmers into attacking Hans, but Luise defuses the situation. Removing this scene makes dramatic sense, as it has strong narrative ties to the eliminated fourth scene, and is ultimately a diversion from the central plot. Removing the finale of the act also required a bit of re-composition, and there are two pages added to the end of scene VI that also contain a few new lines of dialogue. As of yet, no certain authorship for this new material can be determined, but it must have been done at Mahler’s behest. Regardless, this is an excellent example of Mahler’s dramatic sense, choosing to end the act with Luise’s pledge to remain faithful to Hans in his absence instead of an aborted lynching (which seems somewhat contrived as a reason to get the chorus on stage for the finale). Mahler’s alternate finale is much more intimate and emotional in concept. Ending the act by depicting the beginning of Hans’s salvation makes much more sense in the context of the opera’s plot structure, rather than concluding with an unnecessary scene that ultimately has no real consequence for the narrative.
+        </p>
+        <p class="ex1" style="text-indent: 4%">
+            There is enough circumstantial evidence to speculate about when Mahler made these changes during the course of preparation for the production. Scene VII is left intact in the vocal score, and Mahler even goes so far as to mark in all of his cues for the singers, insert rehearsal numbers, and indicate his ideas about stressed syllables. He must have decided to abandon scene VII very early in rehearsals, however, because the orchestral score has been left almost entirely blank. There are just a few markings, including a fermata, a handful of cues, a few expressive marks, and most interestingly, one of the only instances of reorchestration in the entire opera, although it appears it was not retained. Mahler writes “Ob Fag” with a rhythm and unstaved pitches next to it, suggesting he had an idea, but no such corrections appeared in the players’ parts, and in any case the scene went unperformed. However, it is valuable since it reveals that Mahler was dissatisfied with the music in this scene, which, when coupled with its weak dramaturgy, made it an obvious early choice for the chopping block. Mahler also prepared the vocal score of the brief scene IV for rehearsal with the same sorts of indications as found in scene VII. Judging by the conductor’s score, the fourth scene probably survived longer into the rehearsal process than the seventh did, as the score is marked up to a noticeably greater degree with cues and reminders of metrical changes.  
+        </p>
+        <!--////////////////-->
+        <!-- A help overlay -->
+        <!--////////////////-->
+        <div id="help_overlay" class="ex1">
+            <p>Press <b>'+'</b> or <b>'-'</b> to zoom in or out</p>
+            <p>Press <b>right</b> or <b>left</b> arrows to navigate the score</p>
+            <p>Press <b>ctrl + right</b> / <b>left</b> arrows to go to the beginning or the end</p>
+            <p>Resize the window to see the score adjusting to it</p>
+            <p>Press <b>1</b> to show and highlight the published score</p>
+            <p>Press <b>2</b> to show and highlight Mahler's revisions</p>
+        </div>
+        
+        <!-- The div where we are going to insert the SVG -->
+        <div id="svg_output" class="ex2"></div>
+        
+        <script 
+            type="text/javascript">
+            var vrvToolkit = new verovio.toolkit();
+            var page = 1;
+            var zoom = 40;
+            var pageHeight = 2970;
+            var pageWidth = 2100;
+            var appXPath = [];
+
+            function setOptions() {
+                pageHeight = $(document).height() * 100 / zoom;
+                pageWidth = $(window).width() * 100 / zoom;
+                options = {
+                            pageHeight: pageHeight,
+                            pageWidth: pageWidth,
+                            scale: zoom,
+                            adjustPageHeight: true
+                        };
+                vrvToolkit.setOptions(options);
+            }
+
+            function loadData(data) 
+            {
+                setOptions();
+                vrvToolkit.loadData(data);
+
+                page = 1;
+                loadPage();
+            }
+
+            /////////////////////////////////////////////
+            /* A function that loads the selected page */
+            /////////////////////////////////////////////
+            function loadPage() 
+            {
+                svg = vrvToolkit.renderToSVG(page, {});
+                $("#svg_output").html(svg);
+            };
+
+            ////////////////////////////////////////////////////////////
+            /* A function that redoes the layout and reloads the page */
+            ////////////////////////////////////////////////////////////
+            function applyZoom() 
+            {
+                setOptions();
+                vrvToolkit.redoLayout();
+
+                page = 1;
+                loadPage();
+            }
+
+            ////////////////////////////////////////////////
+            /* Some functions for handling various events */
+            ////////////////////////////////////////////////
+            function nextPage() 
+            {
+                if (page >= vrvToolkit.getPageCount()) 
+                {
+                    return;
+                }
+
+                page = page + 1;
+                loadPage();
+            };
+
+            function prevPage() 
+            {
+                if (page <= 1) 
+                {
+                    return;
+                }
+
+                page = page - 1;
+                loadPage();
+            };
+
+            function firstPage() 
+            {
+                page = 1;
+                loadPage();
+            };
+
+            function lastPage() 
+            {
+                page = vrvToolkit.getPageCount();
+                loadPage();
+            };
+
+            function zoomOut() 
+            {
+                if (zoom < 20) 
+                {
+                    return;
+                }
+                zoom = zoom / 2;
+                applyZoom();
+            }
+
+            function zoomIn() 
+            {
+                if (zoom > 80) 
+                {
+                    return;
+                }
+                zoom = zoom * 2;
+                applyZoom();
+            }
+
+            $(document).ready(function() 
+            {
+
+                ////////////////////////
+                /* Binding the events */
+                ////////////////////////
+                $(window).keyup(function(event){
+                    if (event.ctrlKey && (event.keyCode == 37)) 
+                    {
+                        firstPage();
+                    }
+                    else if (event.keyCode == 37) 
+                    {
+                        prevPage();
+                    }
+                    else if (event.ctrlKey && (event.keyCode == 39)) 
+                    {
+                        lastPage();
+                    }
+                    else if (event.keyCode == 39) 
+                    {
+                        nextPage();
+                    }
+                    // see http://www.javascripter.net/faq/keycodes.html
+                    else if ((event.keyCode == 107) || (event.keyCode == 187) || (event.keyCode == 61) ) 
+                    {
+                        zoomIn();
+                    }
+                    else if ((event.keyCode == 109) || (event.keyCode == 189) || (event.keyCode == 173)) 
+                    {
+                        zoomOut();
+                    }
+                    // switch between readings
+                    else if (event.keyCode == 49) {
+                        appXPath = [];
+                        loadFile();
+                    }
+                    else if (event.keyCode == 50) {
+                        appXPath = ["./rdg[contains(@source, '#Mahler')]"];
+                        loadFile();
+                    }
+                });
+
+                $(window).resize(function()
+                {
+                    applyZoom();
+                });
+
+                var file = location.search.substring(1);
+                if (file.length == 0) {
+                     file = "https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/MEI%20Examples/Act_II_Finale%20Siegfried-2.mei"
+                }
+                $.ajax(
+                {
+                    url: file
+                    , dataType: "text"
+                    , success: function(data) 
+                    {
+                        loadData(data);
+                    }
+                });
+            });
+
+            ///////////////////////////////////////////////////
+            /* A variable for selecting the <rdg> in a <app> */
+            ///////////////////////////////////////////////////
+
+            function setOptions() {
+                pageHeight = $(document).height() * 100 / zoom ;
+                pageWidth = $(window).width() * 100 / zoom ;
+                options = {
+                            pageHeight: pageHeight,
+                            pageWidth: pageWidth,
+                            scale: zoom,
+                            adjustPageHeight: true,
+                            appXPathQuery: appXPath
+                        };
+                vrvToolkit.setOptions(options);
+            }
+
+            function loadData(data) {
+                setOptions();
+                vrvToolkit.loadData(data);
+
+                page = 1;
+                loadPage();
+            }
+
+            function loadPage() {
+                svg = vrvToolkit.renderToSVG(page, {});
+                $("#svg_output").html(svg);
+
+                ///////////////////////////////////////////////////
+                /* Highlights the lem in blue and the rdg in red */
+                ///////////////////////////////////////////////////
+                $(".lem").attr("fill", "#00e").attr("stroke", "#00e");
+                $(".rdg").attr("fill", "#d00").attr("stroke", "#d00");
+            };
+
+            function loadFile() {
+                file = "https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/MEI%20Examples/Act_II_Finale%20Siegfried-2.mei";
+                $.ajax({
+                    url: file
+                    , dataType: "text"
+                    , success: function(data) {
+                        loadData(data);
+                    }
+                });
+            }
+        </script>
+        <p class="ex1">
+            <u>Structural Changes: Act III</u>
+        </p>
+        <p class="ex1" style="text-indent: 4%">
+            While Mahler did not remove the third act finale and the music leading up to it wholesale, they were revised so extensively as to fundamentally change the scene, even from the initial vocal score stage. Mahler deleted several lines of dialogue by scratching them out with a pencil, and changed others with the result of increased clarity. The first of these major cuts begins in the fourth bar of rehearsal 113. The cut material is another encounter between Hans and the now borderline hysterical innkeeper about the attempted theft of Hans’ bag. This cut could have been anticipated after the subplot was eliminated earlier in the opera. Then follows an inserted page bearing only the word “chor” and an arrow pointing to the right, followed by another cut using the hatchmark system encountered earlier. There is a tiny corner of a page between the inserted page and the cut, part of the bottom left corner of page 169, which was somehow physically displaced from the rest of the page. This cut, which spans 13 bars, serves to remove all choral material from the scene.  Thirteen bars elapse, with changes made to Hans’ vocal rhythm, before the next cut, which removes a sizable portion of Luise’s dialogue, but nothing that moves the plot forward. Luise’s vocal part is altered, and the next cut commences only two bars after the previous one ended.
+        </p>
+        <p class="ex1" style="text-indent: 4%">
+            This next cut removes a portion of Luise’s text that contains religious content (a prayer to the angels), a passage which Cosima considered “the heart of the work.”<a id="t27" href="#fn27"><sup>27</sup></a> The subsequent cut, this time of some seven pages of material, also removes lines with allusions to angels and God. After this final cut, the bass and cello line is recomposed to be simpler, but the concluding pages play out as Siegfried originally wrote them. Mahler’s removal of all of the opera’s religious content was one of the changes that incensed the Wagners most of all, prompting Cosima’s comments mentioned in the first chapter. In fairness to the Wagners, Mahler’s excision of the religious component does change the character of the work to a certain extent, rendering it a fairly straight-laced fairytale opera of the sort Siegfried’s teacher Humperdinck was famous for, instead of something more closely resembling a Germanic folk opera. According to Cosima, Mahler had originally struck out all of the religious music, but Siegfried lobbied and was able to get “the most important passage replaced.” One assumes that this was the opera’s conclusion, as none of the other few religious scenes were left intact.
+        </p>
+        <p class="ex1" style="text-indent: 4%">
+            Though some of the cuts in the third act finale can be traced to the earliest stages of Mahler’s interaction with the score, the precise trimming of the sacred components does not seem to have been the initial intent. Why Mahler decided to remove all of it is less clear. Considering his overall push for concision and consistency in the opera, it is possible that he chose to eliminate the prayers because piety had not been a thread in the narrative. These aesthetic ideals may not necessarily be what comes to mind when considering Mahler’s own symphonies, given their length and episodic, rapidly-shifting forms, but they are also highly motivic and never become meandering. The difference of genre may seem glaring, but Mahler often spoke of his own compositions in dramatic terms. In line with his view about the musician’s job being to deliver the essential character of a piece, he talked more of the effect musical choices in his symphonies have on an audience’s emotions than on technical musical matters. As an example, the October 1900 performance of the Second Symphony in Munich was given with less than half the string players Mahler desired. He claimed, “when [I have the forces I want], people will be amazed to see how much it magnifies the effect!”<a id="t28" href="#fn28"><sup>28</sup></a> Though his alterations to the orchestration of <i>Bärenhäuter</i> are limited, their presence reminds us that Mahler was keenly aware of orchestral timbre (a point agreed upon by both his supporters and detractors in Vienna, to their own ends). His shaping of Siegfried’s music reflects these sensibilities, reducing the scope of the opera by removing secondary elements, but concentrating it in the process.
+        </p>
+        <br/>
+        <br/>
+        <hr/>
+        <p class="ex1" id="fn27">
+            <a href="#t27"><sup>27</sup></a>De la Grange, <i>Mahler: the years of challenge (1897-1904)</i>, 158.
+        </p>
+        <p class="ex1" id="fn28">
+            <a href="#t28"><sup>28</sup></a> Ibid., 301.
+        </p>
+    </body>
+</html>
