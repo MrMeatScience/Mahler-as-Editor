@@ -9,6 +9,10 @@
                 <respStmt />
             </titleStmt>
             <pubStmt></pubStmt>
+            <sourceDesc>
+                <source xml:id="#Mahler"/>
+                <source xml:id="#Siegfried's published score"/>
+            </sourceDesc>
         </fileDesc>
         <encodingDesc xml:id="encodingdesc-0000001500616493">
             <appInfo xml:id="appinfo-0000001405290134">
