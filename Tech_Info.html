@@ -65,7 +65,7 @@
         <p class="topright"><a href="Bibliography.html" target="_self">Next Page ---></a></p>
         <p class="topleft"><a href="Chapter2_2.html" target="_self">&lt;--- Previous Page</a></p>
         <p class="ex1" style="text-indent: 4%">
-            This website was written using basic HTML and CSS, the basic building blocks for web development. The interactive score examples used in this thesis were encoded using MEI. MEI, or “Music Encoding Initiative,” is an encoding format that is designed to make music machine-readable. It is written according to the MEI schema, “a core set of rules for recording physical and intellectual characteristics of music notation documents expressed as an eXtensible Markup Language (XML) schema.”<a id="t29" href="#fn29"><sup>29</sup></a>
+            This website was written using basic HTML and CSS, the basic building blocks for web development. The interactive score examples used in this thesis were encoded using MEI. MEI, or “Music Encoding Initiative,” is an encoding format that is designed to make music machine-readable. It is written according to the MEI schema, “a core set of rules for recording physical and intellectual characteristics of music notation documents expressed as an eXtensible Markup Language (XML) schema.”<a id="t27" href="#fn27"><sup>27</sup></a>
         </p>
         <img class="ex1" src="https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/Images/MEI%20Visual%20Sample.png" height="600px;" width="779px;"/>
         <p class="ex1">
@@ -73,7 +73,7 @@
         </p>
         <br/>
         <p class="ex1" style="text-indent: 4%">
-            MEI, in and of itself, is simply code, as seen above. In order to express the MEI as a graphical score like traditional printed music, it must be rendered in Verovio. Verovio is a music notation engraving library built in C++, developed by the Swiss RISM office, which can engrave MEI scores into SVG (for display) or MIDI (for playback) files. One reason that it is particularly well-suited for this task is that it very closely mimics MEI’s internal structure, allowing the user to directly reference elements in an MEI file.<a id="t30" href="#fn30"><sup>30</sup></a>
+            MEI, in and of itself, is simply code, as seen above. In order to express the MEI as a graphical score like traditional printed music, it must be rendered in Verovio. Verovio is a music notation engraving library built in C++, developed by the Swiss RISM office, which can engrave MEI scores into SVG (for display) or MIDI (for playback) files. One reason that it is particularly well-suited for this task is that it very closely mimics MEI’s internal structure, allowing the user to directly reference elements in an MEI file.<a id="t28" href="#fn28"><sup>28</sup></a>
         </p>
         <p class="ex1" style="text-indent: 4%">
             It is also easily implementable in webpages, such as this one. There are two ways to do this: the app and the Javascript toolkit. The former is more user-friendly, with a GUI complete with built-in buttons for the navigation and zoom functions, but because it currently lacks compatibility with MEI’s editorial markup capabilities, the toolkit has been used here. The navigation and zoom can be coded in the HTML, as they have been for this thesis, allowing access to the full gamut of Verovio’s capabilities. To express information found in MEI’s critical apparatus, elements can be targeted using an xPath query and highlighted however desired in the webpage.
@@ -84,19 +84,19 @@
         </p>
         <br/>
         <p class="ex1" style="text-indent: 4%">
-            The potential pedagogical use cases for this technology are limitless. Though it is used here for a specific philological purpose, other projects such as Unlocking Musicology’s Lohengrin TimeMachine Digital Companion, created by the Oxford e-Research Centre, use it to a more general end (in that case, to illustrate the appearances of a particular leitmotif and its changes over the course of the opera, accompanied by an essay by musicologist Laurence Dreyfus).<a id="t31" href="#fn31"><sup>31</sup></a>
+            The potential pedagogical use cases for this technology are limitless. Though it is used here for a specific philological purpose, other projects such as Unlocking Musicology’s Lohengrin TimeMachine Digital Companion, created by the Oxford e-Research Centre, use it to a more general end (in that case, to illustrate the appearances of a particular leitmotif and its changes over the course of the opera, accompanied by an essay by musicologist Laurence Dreyfus).<a id="t29" href="#fn29"><sup>29</sup></a>
         </p>
         <br/>
         <br/>
         <hr/>
+        <p class="ex1" id="fn27">
+            <a href="#t27"><sup>27</sup></a> Music Encoding Initiative, “Music Encoding Initiative,” Music Encoding Initiative, accessed 17 November 2019, <a href="https://music-encoding.org">https://music-encoding.org.</a>
+        </p>
+        <p class="ex1" id="fn28">
+            <a href="#t28"><sup>28</sup></a> Verovio, “How it Works: Structure,” Verovio, accessed 17 November 2019, <a href="https://www.verovio.org/structure.xhtml">https://www.verovio.org/structure.xhtml.</a>
+        </p>
         <p class="ex1" id="fn29">
-            <a href="#t29"><sup>29</sup></a> Music Encoding Initiative, “Music Encoding Initiative,” Music Encoding Initiative, accessed 17 November 2019, <a href="https://music-encoding.org">https://music-encoding.org.</a>
-        </p>
-        <p class="ex1" id="fn30">
-            <a href="#t30"><sup>30</sup></a> Verovio, “How it Works: Structure,” Verovio, accessed 17 November 2019, <a href="https://www.verovio.org/structure.xhtml">https://www.verovio.org/structure.xhtml.</a>
-        </p>
-        <p class="ex1" id="fn31">
-            <a href="#t31"><sup>31</sup></a> Unlocking Musicology, “Lohengrin TimeMachine Digital Companion,” University of Oxford e-Research Centre, 7 November 2019.
+            <a href="#t29"><sup>29</sup></a> Unlocking Musicology, “Lohengrin TimeMachine Digital Companion,” University of Oxford e-Research Centre, 7 November 2019.
         </p>
     </body>
 </html>
