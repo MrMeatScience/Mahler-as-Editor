@@ -912,10 +912,10 @@
 			</rdg>
 			</app>
                         <measure xml:id="measure-0000000118600469" n="8">
+			     <tempo staff="1" midi.bpm="172"/>
 			<app>
 			<lem source="#Siegfried's published score">
                             <staff xml:id="staff-0000001022438271" n="1">
-				    <tempo staff="1" midi.bpm="172"/>
                                 <layer xml:id="layer-0000001836352458" n="1">
                                     <mRest xml:id="mrest-0000001665353729" />
                                 </layer>
