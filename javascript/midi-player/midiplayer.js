@@ -78,18 +78,18 @@ function initAudio() {
     
     source.connect(scriptNode);
     source.start(0);
-    console.debug("initAudio");
+    // console.debug("initAudio");
 }
 
 function startAudio() {    
     scriptNode.connect(audioCtx.destination);
-    console.debug("startAudio");
+    // console.debug("startAudio");
 }
 
 function pauseAudio() {
     circularBuffer.reset();
     scriptNode.disconnect();
-	console.debug("pauseAudio");
+    // console.debug("pauseAudio");
 }
 
 
@@ -133,7 +133,7 @@ function updateProgress(current, total) {
 
 function completeConversion(status) {
     midiPlayer_drainBuffer = true;
-    console.debug('completeConversion');
+    // console.debug('completeConversion');
     midiPlayer_convertionJob = null;
     // Not a pause
     if (_EM_signalStop != 2) {
@@ -244,7 +244,7 @@ function convertDataURIToBinary(dataURI) {
 function convertFile(file, data) {
     midiPlayer_midiName = file;
     midiPlayer_input = null;
-    console.log('open ', midiPlayer_midiName);
+    // console.log('open ', midiPlayer_midiName);
     MidiPlayer['FS'].writeFile(midiPlayer_midiName, data, {
         encoding: 'binary'
     });
@@ -363,11 +363,16 @@ function runConversion() {
             if (midiPlayer_totalSamples == 0) return;
             var samples = millisec * SAMPLE_RATE / 1000;
             midiPlayer_currentSamples = Math.min(midiPlayer_totalSamples, samples);
+            console.debug("seeking to ",midiPlayer_currentSamples)
             play();
         };
         
         $.fn.midiPlayer.stop = function () {
             stop();
+        };
+
+        $.fn.midiPlayer.getTime = function () {
+            return 1000 * midiPlayer_currentSamples / SAMPLE_RATE;
         };
         
         // Create the player
