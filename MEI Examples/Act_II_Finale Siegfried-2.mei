@@ -87,6 +87,7 @@
                     <section xml:id="section-0000001538733812">
                         <pb xml:id="pb-0000001276751105" />
                         <measure xml:id="measure-0000001536434136" n="1">
+				<tempo staff="1" midi.bpm="80"/>
                             <staff xml:id="staff-0000001714018401" n="1">
                                 <layer xml:id="layer-0000001368425361" n="1">
                                     <mRest xml:id="mrest-0000001003363506" />
