@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta charset="utf-8" /> 
         <style>
         p.ex1 
         {
@@ -33,7 +34,7 @@
         margin-right: 20%;
         }
 </style>
-        <style type="text/css">
+ <style type="text/css">
  p.topright
  {
    position:absolute;
@@ -54,14 +55,18 @@
   }
 </style>
         <title>Mahler as Editor</title>
+        <!-- verovio scripts -->
         <script src="https://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
-        <!-- We also use jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
         <script src="javascript/basic-events.js" type="text/javascript" ></script>
-        <!--///////////////////////////////////-->
-        <!-- A stylesheet for the help overlay -->
-        <!--///////////////////////////////////-->
-        <link rel="stylesheet" href="https://raw.githubusercontent.com/rism-ch/verovio-tutorial/gh-pages/css/tutorial.css" />
+
+        <!-- scripts necessary for the MIDI player -->
+        <script type="text/javascript" language="javascript" src="javascript/midi-player/wildwebmidi.js"></script>
+        <script type="text/javascript" language="javascript" src="javascript/midi-player/midiplayer.js"></script>
+        <link rel="stylesheet" href="css/midiplayer.css" />
+
+        <!-- help overlay stylesheet -->
+        <link rel="stylesheet" href="css/help_overlay.css" />
     </head>
     <body>
         <h4 class="ex1">Chapter II: Mahler’s Revisions</h4>
@@ -73,239 +78,26 @@
         <p class="ex1" style="text-indent: 4%">
             There is enough circumstantial evidence to speculate about when Mahler made these changes during the course of preparation for the production. Scene VII is left intact in the vocal score, and Mahler even goes so far as to mark in all of his cues for the singers, insert rehearsal numbers, and indicate his ideas about stressed syllables. He must have decided to abandon scene VII very early in rehearsals, however, because the orchestral score has been left almost entirely blank. There are just a few markings, including a fermata, a handful of cues, a few expressive marks, and most interestingly, one of the only instances of reorchestration in the entire opera, although it appears it was not retained. Mahler writes “Ob Fag” with a rhythm and unstaved pitches next to it, suggesting he had an idea, but no such corrections appeared in the players’ parts, and in any case the scene went unperformed. However, it is valuable since it reveals that Mahler was dissatisfied with the music in this scene, which, when coupled with its weak dramaturgy, made it an obvious early choice for the chopping block. Mahler also prepared the vocal score of the brief scene IV for rehearsal with the same sorts of indications as found in scene VII. Judging by the conductor’s score, the fourth scene probably survived longer into the rehearsal process than the seventh did, as the score is marked up to a noticeably greater degree with cues and reminders of metrical changes.  
         </p>
-        <!--////////////////-->
+        <p class="ex1">
+            <u>FIGURE II: caption this</u>
+        </p>
+
+        <!-- The div where we are going to insert the MIDI Player -->
+        <div style="height: 30px; width:max-content;margin-left: 30%">
+            <div id="player" style="position: absolute;width:450px; display: none;"></div>
+        </div><br/>
+        <!-- The div where we are going to insert the SVG -->
+        <div id="svg_output"></div>
         <!-- A help overlay -->
-        <!--////////////////-->
-        <div id="help_overlay" class="ex1">
-            <p>Press <b>'+'</b> or <b>'-'</b> to zoom in or out</p>
-            <p>Press <b>right</b> or <b>left</b> arrows to navigate the score</p>
-            <p>Press <b>ctrl + right</b> / <b>left</b> arrows to go to the beginning or the end</p>
-            <p>Resize the window to see the score adjusting to it</p>
-            <p>Press <b>1</b> to show and highlight the published score</p>
-            <p>Press <b>2</b> to show and highlight Mahler's revisions</p>
+        <div id="help_overlay" style="margin-left: auto">
+            <p>Press <b>'+'</b> or <b>'-'</b> to zoom in or out</p><br/>
+            <p>Press <b>right</b> or <b>left</b> arrows to navigate the score</p><br/>
+            <p>Press <b>ctrl + right</b> / <b>left</b> arrows to go to the beginning or the end</p><br/>
+            <p>Press <b>1</b> to show and highlight the published score</p><br/>
+            <p>Press <b>2</b> to show and highlight Mahler's revisions</p><br/>
+            <p>Press <b>p</b> to start and stop playback</p><br/>
         </div>
         
-        <!-- The div where we are going to insert the SVG -->
-        <div id="svg_output" class="ex2"></div>
-        
-        <script 
-            type="text/javascript">
-            var vrvToolkit = new verovio.toolkit();
-            var page = 1;
-            var zoom = 40;
-            var pageHeight = 2970;
-            var pageWidth = 2100;
-            var appXPath = [];
-
-            function setOptions() {
-                pageHeight = $(document).height() * 100 / zoom;
-                pageWidth = $(window).width() * 100 / zoom;
-                options = {
-                            pageHeight: pageHeight,
-                            pageWidth: pageWidth,
-                            scale: zoom,
-                            adjustPageHeight: true
-                        };
-                vrvToolkit.setOptions(options);
-            }
-
-            function loadData(data) 
-            {
-                setOptions();
-                vrvToolkit.loadData(data);
-
-                page = 1;
-                loadPage();
-            }
-
-            /////////////////////////////////////////////
-            /* A function that loads the selected page */
-            /////////////////////////////////////////////
-            function loadPage() 
-            {
-                svg = vrvToolkit.renderToSVG(page, {});
-                $("#svg_output").html(svg);
-            };
-
-            ////////////////////////////////////////////////////////////
-            /* A function that redoes the layout and reloads the page */
-            ////////////////////////////////////////////////////////////
-            function applyZoom() 
-            {
-                setOptions();
-                vrvToolkit.redoLayout();
-
-                page = 1;
-                loadPage();
-            }
-
-            ////////////////////////////////////////////////
-            /* Some functions for handling various events */
-            ////////////////////////////////////////////////
-            function nextPage() 
-            {
-                if (page >= vrvToolkit.getPageCount()) 
-                {
-                    return;
-                }
-
-                page = page + 1;
-                loadPage();
-            };
-
-            function prevPage() 
-            {
-                if (page <= 1) 
-                {
-                    return;
-                }
-
-                page = page - 1;
-                loadPage();
-            };
-
-            function firstPage() 
-            {
-                page = 1;
-                loadPage();
-            };
-
-            function lastPage() 
-            {
-                page = vrvToolkit.getPageCount();
-                loadPage();
-            };
-
-            function zoomOut() 
-            {
-                if (zoom < 20) 
-                {
-                    return;
-                }
-                zoom = zoom / 2;
-                applyZoom();
-            }
-
-            function zoomIn() 
-            {
-                if (zoom > 80) 
-                {
-                    return;
-                }
-                zoom = zoom * 2;
-                applyZoom();
-            }
-
-            $(document).ready(function() 
-            {
-
-                ////////////////////////
-                /* Binding the events */
-                ////////////////////////
-                $(window).keyup(function(event){
-                    if (event.ctrlKey && (event.keyCode == 37)) 
-                    {
-                        firstPage();
-                    }
-                    else if (event.keyCode == 37) 
-                    {
-                        prevPage();
-                    }
-                    else if (event.ctrlKey && (event.keyCode == 39)) 
-                    {
-                        lastPage();
-                    }
-                    else if (event.keyCode == 39) 
-                    {
-                        nextPage();
-                    }
-                    // see http://www.javascripter.net/faq/keycodes.html
-                    else if ((event.keyCode == 107) || (event.keyCode == 187) || (event.keyCode == 61) ) 
-                    {
-                        zoomIn();
-                    }
-                    else if ((event.keyCode == 109) || (event.keyCode == 189) || (event.keyCode == 173)) 
-                    {
-                        zoomOut();
-                    }
-                    // switch between readings
-                    else if (event.keyCode == 49) {
-                        appXPath = [];
-                        loadFile();
-                    }
-                    else if (event.keyCode == 50) {
-                        appXPath = ["./rdg[contains(@source, '#Mahler')]"];
-                        loadFile();
-                    }
-                });
-
-                $(window).resize(function()
-                {
-                    applyZoom();
-                });
-
-                var file = location.search.substring(1);
-                if (file.length == 0) {
-                     file = "https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/MEI%20Examples/Act_II_Finale%20Siegfried-2.mei"
-                }
-                $.ajax(
-                {
-                    url: file
-                    , dataType: "text"
-                    , success: function(data) 
-                    {
-                        loadData(data);
-                    }
-                });
-            });
-
-            ///////////////////////////////////////////////////
-            /* A variable for selecting the <rdg> in a <app> */
-            ///////////////////////////////////////////////////
-
-            function setOptions() {
-                pageHeight = $(document).height() * 100 / zoom ;
-                pageWidth = $(window).width() * 100 / zoom ;
-                options = {
-                            pageHeight: pageHeight,
-                            pageWidth: pageWidth,
-                            scale: zoom,
-                            adjustPageHeight: true,
-                            appXPathQuery: appXPath
-                        };
-                vrvToolkit.setOptions(options);
-            }
-
-            function loadData(data) {
-                setOptions();
-                vrvToolkit.loadData(data);
-
-                page = 1;
-                loadPage();
-            }
-
-            function loadPage() {
-                svg = vrvToolkit.renderToSVG(page, {});
-                $("#svg_output").html(svg);
-
-                ///////////////////////////////////////////////////
-                /* Highlights the lem in blue and the rdg in red */
-                ///////////////////////////////////////////////////
-                $(".lem").attr("fill", "#00e").attr("stroke", "#00e");
-                $(".rdg").attr("fill", "#d00").attr("stroke", "#d00");
-            };
-
-            function loadFile() {
-                file = "https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/MEI%20Examples/Act_II_Finale%20Siegfried-2.mei";
-                $.ajax({
-                    url: file
-                    , dataType: "text"
-                    , success: function(data) {
-                        loadData(data);
-                    }
-                });
-            }
-        </script>
         <p class="ex1">
             <u>Structural Changes: Act III</u>
         </p>
@@ -330,5 +122,342 @@
         <p class="bottomright">
             <a href="Tech_Info.html">Next Page --></a>
         </p>
+        <script 
+            type="text/javascript">
+            var vrvToolkit = new verovio.toolkit();
+
+            // navigation variables
+            var page = 1;
+            var zoom = 40;
+            var pageHeight = 2970;
+            var pageWidth = 2100;
+
+            // for keeping track of the readings
+            var appXPath = [];
+            var currentReading = 1;
+
+
+            ////////////////////////////////////////////////////////////
+            /* A function that redoes the layout and reloads the page */
+            ////////////////////////////////////////////////////////////
+
+            //////////////////////////
+            /* navigation functions */
+            //////////////////////////
+            function applyZoom() {
+                setOptions();
+                vrvToolkit.redoLayout();
+
+                page = 1;
+                loadPage();
+            }
+
+            function nextPage()  {
+                if (page >= vrvToolkit.getPageCount()) {
+                    return;
+                }
+
+                page = page + 1;
+                loadPage();
+            };
+
+            function prevPage() {
+                if (page <= 1) {
+                    return;
+                }
+
+                page = page - 1;
+                loadPage();
+            };
+
+            function firstPage(){
+                page = 1;
+                loadPage();
+            };
+
+            function lastPage() {
+                page = vrvToolkit.getPageCount();
+                loadPage();
+            };
+
+            function zoomOut() {
+                if (zoom < 20)  {
+                    return;
+                }
+                zoom = zoom - 5;
+                applyZoom();
+            }
+
+            function zoomIn() {
+                if (zoom > 80) {
+                    return;
+                }
+                zoom = zoom + 5;
+                applyZoom();
+            }
+
+            ////////////////////
+            /* MIDI FUNCTIONS */
+            ////////////////////
+
+            var ids = []; // this will store the IDs of highlighted notes
+            var isPlaying = false;
+            var isPaused = false;
+
+            // i tried playing around with getting the player to sync to the previous timestamp when you switch readings, but was unsuccessful. you can play around with it if you want
+            function reload_midi() { 
+                // curTime = Math.floor($("#player").midiPlayer.getTime());
+                $("#player").midiPlayer.stop();
+                // play_midi();
+                // $("#player").midiPlayer.seek(curTime-400);
+            }
+
+            function play_midi() {
+                console.log("loading new midi file")
+                var base64midi = vrvToolkit.renderToMIDI();
+                var song = 'data:audio/midi;base64,' + base64midi;
+                $("#player").show();
+                $("#player").midiPlayer.play(song);
+                isPlaying = true;
+                isPaused = false;
+            }
+
+            function pause_midi() {
+                console.log("pausing")
+                document.getElementById('midiPlayer_pause').click();
+                isPaused = true;
+                isPlaying = true;
+            }
+        
+            function unpause_midi() {
+                console.log("unpausing")
+                // curTime = Math.floor($("#player").midiPlayer.getTime());
+                // console.log('time at unpause:', curTime);
+                // $("#player").midiPlayer.seek(curTime-400);
+                document.getElementById('midiPlayer_play').click();
+                isPaused = false;
+                isPlaying = true;
+            }
+
+            var midiUpdate = function(time) {
+                var vrvTime = Math.max(0, time - 400);
+                // get the notes at the current time
+                var elementsattime = vrvToolkit.getElementsAtTime(vrvTime);
+                if (elementsattime.page > 0) {
+                    // move to the next page of music as necessary
+                    if (elementsattime.page != page) {
+                        page = elementsattime.page;
+                        loadPage();
+                    }
+                    // if there are notes, and not all of them are in ids already
+                    if ((elementsattime.notes.length > 0) && (ids != elementsattime.notes)) {
+                        ids.forEach(function(noteid) {
+                            // if we are not playing the note, set it to its color
+                            if ($.inArray(noteid, elementsattime.notes) == -1) {
+                                element = $("#" + noteid)[0]
+                                if (element.closest(".rdg") != null){
+                                    $("#" + noteid).attr("fill", "#d00").attr("stroke", "#d00");
+                                } else if (element.closest(".lem") != null) {
+                                    $("#" + noteid).attr("fill", "#00e").attr("stroke", "#00e");
+                                } else {
+                                    $("#" + noteid).attr("fill", "#000").attr("stroke", "#000");
+                                }
+                            }
+                        });
+                        ids = elementsattime.notes;
+                        ids.forEach(function(noteid) {
+                            // if we are playing the note, set it to red
+                            if ($.inArray(noteid, elementsattime.notes) != -1) {
+                                $("#" + noteid).attr("fill", "#ccc").attr("stroke", "#ccc");; 
+                            }
+                        }); 
+                    }
+                }
+            }
+
+            // when the midi stops playing, set all notes to black and hide the player
+            var midiStop = function() {
+                ids.forEach(function(noteid) {
+                    $("#" + noteid).attr("fill", "#000").attr("stroke", "#000"); 
+                });
+                $(".lem").attr("fill", "#00e").attr("stroke", "#00e");
+                $(".rdg").attr("fill", "#d00").attr("stroke", "#d00");
+                
+                // $("#player").hide();
+                isPlaying = false;
+                isPaused = false;
+                console.log("midistop")
+            }
+
+
+
+
+            $(document).ready(function() 
+            {
+
+                ///////////////////////////////////
+                /* Binding the navigation events */
+                ///////////////////////////////////
+                $(window).keyup(function(event){
+                    // ctrl+leftarrow keypress
+                    if (event.ctrlKey && (event.keyCode == 37)) 
+                    {
+                        firstPage();
+                    }
+                    // leftarrow keypress
+                    else if (event.keyCode == 37) 
+                    {
+                        prevPage();
+                    }
+                    // ctrl + rightarrow keypress
+                    else if (event.ctrlKey && (event.keyCode == 39)) 
+                    {
+                        lastPage();
+                    }
+                    // rightarrow keypress
+                    else if (event.keyCode == 39) 
+                    {
+                        nextPage();
+                    }
+                    // + keypress
+                    else if ((event.keyCode == 107) || (event.keyCode == 187) || (event.keyCode == 61) ) 
+                    {
+                        zoomIn();
+                    }
+                    // - keypress
+                    else if ((event.keyCode == 109) || (event.keyCode == 189) || (event.keyCode == 173)) 
+                    {
+                        zoomOut();
+                    }
+                /////////////////////////////////
+                /* binding the MIDI keypresses */
+                /////////////////////////////////
+                    else if (event.keyCode == 49) {
+                        console.log("KEYPRESS: 1");
+                        // load reading 1 in if it's not already
+                        if (currentReading == 1){
+                            return;
+                        } else {
+                            currentReading = 1;
+                            appXPath = [];
+                            loadFile();
+                        }
+
+                        // change the midi player if currently playing
+                        if (isPlaying){
+                            reload_midi()
+                        }
+                    }
+                    else if (event.keyCode == 50) {
+                        console.log("KEYPRESS: 2");
+                        // load reading 2 in if it's not already
+                        if (currentReading == 2){
+                            return;
+                        } else {
+                            currentReading = 2;
+                            appXPath = ["./rdg[contains(@source, '#Mahler')]"];
+                            loadFile();
+                        }
+
+                        // change the midi player if currently playing
+                        if (isPlaying){
+                            reload_midi()
+                        }
+                    }
+
+                    // toggle the MIDI when we press 'p'
+                    else if (event.keyCode == 80) {
+                        console.log("KEYPRESS: P");
+                        // if paused, resume playing
+                        if (isPaused){
+                            unpause_midi();
+                        } else {
+                        // if it was playing the file but not paused, pause it
+                            if (isPlaying){
+                                pause_midi();
+                        // otherwise begin playing
+                            }else{
+                                play_midi();
+                            }
+                        }
+                    }
+                });
+
+                $(window).resize(function()
+                {
+                    applyZoom();
+                });
+
+                // add the player to the div
+                $("#player").midiPlayer({
+                    color: "#c00",
+                    onUpdate: midiUpdate,
+                    onStop: midiStop,
+                    width: 250
+                });
+
+                loadFile();
+                setTimeout(function(){
+                    play_midi();
+                    pause_midi();
+                }, 500);       
+
+            });
+
+            ////////////////////////////////////////////
+            /* Functions for loading page information */
+            ////////////////////////////////////////////
+
+            function setOptions() {
+                pageHeight = $(document).height() * 95 / zoom ;
+                pageWidth = $(window).width() * 95 / zoom ;
+                options = {
+                            pageHeight: pageHeight,
+                            pageWidth: pageWidth,
+                            scale: zoom,
+                            adjustPageHeight: true,
+                            appXPathQuery: appXPath
+                        };
+                vrvToolkit.setOptions(options);
+            }
+
+            function loadData(data) {
+                setOptions();
+                vrvToolkit.loadData(data);
+
+                page = 1;
+                loadPage();
+            }
+
+            function loadPage() {
+                svg = vrvToolkit.renderToSVG(page, {});
+                $("#svg_output").html(svg);
+
+                // if we click a note, grab the ID and move the midi player to that time
+                $(".note").click(function() {
+                    var id = $(this).attr("id");
+                    var time = vrvToolkit.getTimeForElement(id);
+                    $("#midi-player").midiPlayer.seek(time);
+                    isPaused = false
+                });
+
+                ///////////////////////////////////////////////////
+                /* Highlights the lem in blue and the rdg in red */
+                ///////////////////////////////////////////////////
+                $(".lem").attr("fill", "#00e").attr("stroke", "#00e");
+                $(".rdg").attr("fill", "#d00").attr("stroke", "#d00");
+            };
+ 
+            function loadFile() {
+                file = "https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/MEI%20Examples/Act_II_Finale%20Siegfried-2.mei";
+                $.ajax({
+                    url: file
+                    , dataType: "text"
+                    , success: function(data) {
+                        loadData(data);
+                    }
+                });
+            }
+         </script>
     </body>
 </html>
