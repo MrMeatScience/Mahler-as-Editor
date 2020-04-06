@@ -61,42 +61,92 @@
 <title>Mahler as Editor</title>
     </head>
     <body>
-        <h4 class="ex1">Chapter III: Technical Information</h4>
+        <h4 class="ex1">Part IV: Technical Information</h4>
         <p class="topright"><a href="Bibliography.html" target="_self">Next Page ---></a></p>
         <p class="topleft"><a href="Chapter2_2.html" target="_self">&lt;--- Previous Page</a></p>
-        <p class="ex1" style="text-indent: 4%">
-            This website was written using basic HTML and CSS, the basic building blocks for web development. The interactive score examples used in this thesis were encoded using MEI. MEI, or “Music Encoding Initiative,” is an encoding format that is designed to make music machine-readable. It is written according to the MEI schema, “a core set of rules for recording physical and intellectual characteristics of music notation documents expressed as an eXtensible Markup Language (XML) schema.”<a id="t27" href="#fn27"><sup>27</sup></a>
+        <p class="ex1" style="text-indent: 3em">
+            The interactive score examples used in this thesis were encoded using MEI. MEI, or “Music Encoding Initiative,” is 
+            an encoding format that is designed to make music machine-readable. It is written according to the MEI schema, “a core
+            set of rules for recording physical and intellectual characteristics of music notation documents expressed as an 
+            eXtensible Markup Language (XML) schema.”<a id="t46" href="#fn46"><sup>46</sup></a>
         </p>
         <img class="ex1" src="https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/Images/MEI%20Visual%20Sample.png" height="600px;" width="779px;"/>
         <p class="ex1">
-            <u>Fig. 3: Unrendered MEI</u>
+            <u>Image VI: Unrendered MEI in TextEdit</u>
         </p>
         <br/>
-        <p class="ex1" style="text-indent: 4%">
-            MEI, in and of itself, is simply code, as seen above. In order to express the MEI as a graphical score like traditional printed music, it must be rendered in Verovio. Verovio is a music notation engraving library built in C++, developed by the Swiss RISM office, which can engrave MEI scores into SVG (for display) or MIDI (for playback) files. One reason that it is particularly well-suited for this task is that it very closely mimics MEI’s internal structure, allowing the user to directly reference elements in an MEI file.<a id="t28" href="#fn28"><sup>28</sup></a>
+        <p class="ex1" style="text-indent: 3em">
+            MEI, in and of itself is simply code, as seen above. In order to express the MEI as a graphical score like traditional
+            printed music, it must be rendered in Verovio. Verovio is a music notation engraving library built in C++, developed by
+            the Swiss RISM office, which can engrave MEI scores into SVG (for display) or MIDI (for playback) files. One reason that
+            it is particularly well-suited for this task is that it very closely mimics MEI’s internal structure, allowing the user
+            to directly reference elements in an MEI file.<a id="t47" href="#fn47"><sup>47</sup></a> It is also easily implementable
+            in webpages, such as this one. There are two ways to do this: the app and the Javascript toolkit. The former is more 
+            user-friendly, with a GUI complete with built-in buttons for the navigation and zoom functions, but because it 
+            currently lacks compatibility with MEI’s editorial markup capabilities, the toolkit has been used here. The navigation 
+            and zoom can be coded in the HTML, as they have been for this thesis, allowing access to the full gamut of Verovio’s 
+            capabilities. To express information found in MEI’s critical apparatus, elements can be targeted using an xPath query 
+            and highlighted however desired. The website itself was written using basic HTML and CSS, and hosted on GitHub along 
+            with all of the required files (MEI, images, etc.). 
         </p>
-        <p class="ex1" style="text-indent: 4%">
-            It is also easily implementable in webpages, such as this one. There are two ways to do this: the app and the Javascript toolkit. The former is more user-friendly, with a GUI complete with built-in buttons for the navigation and zoom functions, but because it currently lacks compatibility with MEI’s editorial markup capabilities, the toolkit has been used here. The navigation and zoom can be coded in the HTML, as they have been for this thesis, allowing access to the full gamut of Verovio’s capabilities. To express information found in MEI’s critical apparatus, elements can be targeted using an xPath query and highlighted however desired in the webpage.
+        <p class="ex1" style="text-indent: 3em">
+            Verovio has the capacity to play examples encoded in MEI through MIDI, which represents a major step forward in the usual
+            model of visual-only score examples. I implemented audio capability (with technical assistance from Dylan Folsom and 
+            Anna Jandura-Cessna) through the toolkit in much the same way as the features described above, although it needs to run
+            on a web server in order to work. Despite the limitations of the player, which interprets certain markings incorrectly 
+            and is generally buggy, it is particularly useful in the case of this thesis, because it allows the reader to both hear 
+            and see the differences between the two versions of the score. Further focused development of this technology could 
+            quickly correct its current shortcomings.
         </p>
         <img class="ex1" src="https://raw.githubusercontent.com/MrMeatScience/Mahler-as-Editor/master/Images/Verovio%20toolkit%20screenshot.png" alt="Verovio toolkit code screenshot"/>
         <p class="ex1">
-            <u>Fig. 4: Verovio toolkit code</u>
+            <u>Image VII: Sample HTML related to the Verovio toolkit’s editorial functionality</u>
+        </p>
+        <p class="ex1" style="text-indent: 3em">
+            The potential pedagogical use cases for this technology are limitless. Though it is used here for a specific 
+            philological purpose, other projects, such as Unlocking Musicology’s Lohengrin TimeMachine Digital Companion, created 
+            by the Oxford e-Research Centre, use it to a more general end. In that case, it illustrates the appearances of a 
+            particular leitmotif and its changes over the course of an opera, accompanied by an essay by musicologist Laurence 
+            Dreyfus.<a id="t48" href="#fn48"><sup>48</sup></a>
         </p>
         <br/>
-        <p class="ex1" style="text-indent: 4%">
-            The potential pedagogical use cases for this technology are limitless. Though it is used here for a specific philological purpose, other projects such as Unlocking Musicology’s Lohengrin TimeMachine Digital Companion, created by the Oxford e-Research Centre, use it to a more general end (in that case, to illustrate the appearances of a particular leitmotif and its changes over the course of the opera, accompanied by an essay by musicologist Laurence Dreyfus).<a id="t29" href="#fn29"><sup>29</sup></a>
+        <p class="ex1">
+            <b>Conclusions</b>
+        </p>
+        <p class="ex1" style="text-indent: 3em">
+            Examining Mahler’s work outside of his own compositions can offer an illuminating insight into his aesthetics. After 
+            all, we can learn as much about his sensibilities from seeing what he didn’t like and how he attempted to improve it as 
+            we can by examining his original work. The numerous flaws Mahler perceived in <i>Der Bärenhäuter</i> and the large 
+            amount of surviving material for the opera make it an excellent case study for this kind of inquiry. That Mahler was 
+            either naturally or through experience a man of the theatre is undeniable in light of the changes made to 
+            <i>Bärenhäuter</i>. There is a concerted effort to increase the dramatic impact throughout, manifested not only in the 
+            minutiae of individual scenes but in the large-scale narrative arc of the entire opera. Other modifications to the 
+            score are practical in nature, helping to convey an aspect of the drama to the audience, as the added dialogue in the 
+            third scene of the second act does. Still other changes distill the story to its essence. The removal of trivial 
+            subplots is one obvious example of this sort made in <i>Der Bärenhäuter</i>.
+        </p>
+        <p class="ex1" style="text-indent: 3em">
+            The use of MEI and Verovio to illustrate these musicological points about Mahler’s practices represents an exciting 
+            step forward in the integration of 21st-century digital technologies with research in the discipline. Through the 
+            hard work of the MEI community and individuals like Dr. Laurent Pugin at Verovio, these technologies are constantly 
+            improving and offering ever-more utility to the researcher looking to explore new questions. I see the use of 
+            interactive score examples of the sort employed in this thesis as an improvement over the traditional static model 
+            because of the ability to play back the audio samples from the web browser and to dynamically switch between 
+            readings of the score. Future research on the topic of this thesis might explore the creation of a digital edition 
+            (encoded in MEI) of Mahler’s version of <i>Der Bärenhäuter</i>, allowing for a complete appraisal of the original work 
+            as juxtaposed with the 1899 Hofoper production.
         </p>
         <br/>
         <br/>
         <hr/>
-        <p class="ex1" id="fn27">
-            <a href="#t27"><sup>27</sup></a> Music Encoding Initiative, “Music Encoding Initiative,” Music Encoding Initiative, accessed 17 November 2019, <a href="https://music-encoding.org">https://music-encoding.org.</a>
+        <p class="ex1" id="fn46">
+            <a href="#t46"><sup>46</sup></a> Music Encoding Initiative, “Music Encoding Initiative,” Music Encoding Initiative, accessed 17 November 2019, <a href="https://music-encoding.org">https://music-encoding.org.</a>
         </p>
-        <p class="ex1" id="fn28">
-            <a href="#t28"><sup>28</sup></a> Verovio, “How it Works: Structure,” Verovio, accessed 17 November 2019, <a href="https://www.verovio.org/structure.xhtml">https://www.verovio.org/structure.xhtml.</a>
+        <p class="ex1" id="fn47">
+            <a href="#t47"><sup>47</sup></a> Verovio, “How it Works: Structure,” Verovio, accessed 17 November 2019, <a href="https://www.verovio.org/structure.xhtml">https://www.verovio.org/structure.xhtml.</a>
         </p>
-        <p class="ex1" id="fn29">
-            <a href="#t29"><sup>29</sup></a> Unlocking Musicology, “Lohengrin TimeMachine Digital Companion,” University of Oxford e-Research Centre, 7 November 2019.
+        <p class="ex1" id="fn48">
+            <a href="#t48"><sup>48</sup></a> Unlocking Musicology, “Lohengrin TimeMachine Digital Companion,” University of Oxford e-Research Centre, 7 November 2019.
         </p>
     </body>
 </html>
